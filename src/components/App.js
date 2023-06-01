@@ -2,7 +2,8 @@ import { Component } from "react";
 import { ModernNormalize } from "emotion-modern-normalize";
 import { GlobalStyle } from "GlobalStyles";
 import { nanoid } from "nanoid";
-import contacts from "../contacts.json";
+
+import contacts from "../data/contacts.json";
 
 import ContactForm from "./ContactForm";
 import Filter from "./Filter";
@@ -11,7 +12,7 @@ import ContactList from "./ContactList";
 export class App extends Component {
   state = {
     // hardcoded data from task for testing
-    contacts: [],
+    contacts: [ ...contacts ],
     filter: "",
   };
   
